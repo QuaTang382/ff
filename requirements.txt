@@ -7,3 +7,4 @@ psutil
 PyJWT
 urllib3
 protobuf-decoder
+scapy>=2.4.5
